@@ -1,21 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacil Store</title>
-    <style>
-        body{
-            text-align: center;
-        }
-        h1{
-            font-size: 50px;
-        }
-    </style>
-</head>
-<body>
-    <h1>{{ app }}</h1>
-    <h5>Name: {{ name }}</h5>
-    <h5>Class: {{ class }}</h5>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="app-detail">
+        <span class="app1">{{ app1 }}</span> 
+        <span class="app2">{{ app2 }}</span> 
+        <span class="app3">{{ app3 }}</span>
+    </h1>
+    <h5 class="app-detail identity">Name: {{ name }}</h5>
+    <h5 class="app-detail identity">Class: {{ class }}</h5>
+
+    <a href="{% url 'main:create_product' %}">
+    <button class="add">+ Add Product</button>
+    </a>
+
+    <hr>
+
+    <div class="product-list">
+    {% if not product_list %}
+    <p class="empty-list">Belum ada barang pada pacil store.</p>
+    {% else %}
+
+    {% for product in product_list %}
+    <div class="product-item">
+    {% if product.thumbnail %}
+    <img src="{{ product.thumbnail }}" alt="ini thumbnail" width="150" height="100">
+    {% else %}
+    <img src="https://picsum.photos/200" alt="Lorem Picsum" width="150" height="100">
+    <br />
+    {% endif %}
+
+    <h2><a href="{% url 'main:show_product' product.id %}">{{ product.name }}</a></h2>
+
+    <p><b>{{ product.get_category_display }}</b>{% if product.is_featured %} | 
+        <b>Featured</b>{% endif %} | <i>{{ product.created_at|date:"d M Y H:i" }}</i> 
+        | Views: {{ product.product_views }}</p>
+
+
+    <p>{{ product.description|truncatewords:25 }}...</p>
+
+    <p><a href="{% url 'main:show_product' product.id %}"><button>Read More</button></a></p>
+    </div>
+
+    
+    {% endfor %}
+
+    {% endif %}
+    </div>
+{% endblock content %}

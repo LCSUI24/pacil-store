@@ -1,4 +1,6 @@
 # pacil-store
+**Tugas 2**
+
 *pertanyaan satu*
 - membuat repository pada github desktop
 - publish repository tersebut ke github
@@ -9,7 +11,7 @@
 - membuat projek dengan menjalankan command "django-admin startproject pacil_store .
 - membuat file .env dan diisi dengan konfigurasi "PRODUCTION=False"
 - membuat file .env.prod untuk konfigurasi pada saat deployment diisi dengan 
-{   
+~~~   
     DB_NAME=<nama database>
     DB_HOST=<host database>
     DB_PORT=<port database>
@@ -17,9 +19,9 @@
     DB_PASSWORD=<password database>
     SCHEMA=tugas_individu
     PRODUCTION=True
-}
+~~~
 - menambahkan kode berikut pada file settings.py 
-{
+~~~
     import os
     from dotenv import load_dotenv
     
@@ -51,130 +53,130 @@
                 'NAME': BASE_DIR / 'db.sqlite3',
             }
         }
-}
+~~~
 - jalankan command berikut untuk migration "python manage.py migrate"
-- buat file git ignore diisi dengan 
-{
-    # Django
-    *.log
-    *.pot
-    *.pyc
-    **pycache**
-    db.sqlite3
-    media
-    # Backup files
-    *.bak
-    # If you are using PyCharm
-    # User-specific stuff
-    .idea/**/workspace.xml
-    .idea/**/tasks.xml
-    .idea/**/usage.statistics.xml
-    .idea/**/dictionaries
-    .idea/**/shelf
-    # AWS User-specific
-    .idea/**/aws.xml
-    # Generated files
-    .idea/**/contentModel.xml
-    .DS_Store
-    # Sensitive or high-churn files
-    .idea/**/dataSources/
-    .idea/**/dataSources.ids
-    .idea/**/dataSources.local.xml
-    .idea/**/sqlDataSources.xml
-    .idea/**/dynamic.xml
-    .idea/**/uiDesigner.xml
-    .idea/**/dbnavigator.xml
-    # Gradle
-    .idea/**/gradle.xml
-    .idea/**/libraries
-    # File-based project format
-    *.iws
-    # IntelliJ
-    out/
-    # JIRA plugin
-    atlassian-ide-plugin.xml
-    # Python
-    *.py[cod]
-    *$py.class
-    # Distribution / packaging
-    .Python build/
-    develop-eggs/
-    dist/
-    downloads/
-    eggs/
-    .eggs/
-    lib/
-    lib64/
-    parts/
-    sdist/
-    var/
-    wheels/
-    *.egg-info/
-    .installed.cfg
-    *.egg
-    *.manifest
-    *.spec
-    # Installer logs
-    pip-log.txt
-    pip-delete-this-directory.txt
-    # Unit test / coverage reports
-    htmlcov/
-    .tox/
-    .coverage
-    .coverage.*
-    .cache
-    .pytest_cache/
-    nosetests.xml
-    coverage.xml
-    *.cover
-    .hypothesis/
-    # Jupyter Notebook
-    .ipynb_checkpoints
-    # pyenv
-    .python-version
-    # celery
-    celerybeat-schedule.*
-    # SageMath parsed files
-    *.sage.py
-    # Environments
-    .env*
-    !.env.example*
-    .venv
-    env/
-    venv/
-    ENV/
-    env.bak/
-    venv.bak/
-    # mkdocs documentation
-    /site
-    # mypy
-    .mypy_cache/
-    # Sublime Text
-    *.tmlanguage.cache
-    *.tmPreferences.cache
-    *.stTheme.cache
-    *.sublime-workspace
-    *.sublime-project
-    # sftp configuration file
-    sftp-config.json
-    # Package control specific files Package
-    Control.last-run
-    Control.ca-list
-    Control.ca-bundle
-    Control.system-ca-bundle
-    GitHub.sublime-settings
-    # Visual Studio Code
-    .vscode/*
-    !.vscode/settings.json
-    !.vscode/tasks.json
-    !.vscode/launch.json
-    !.vscode/extensions.json
-    .history
-}
+- buat file git ignore diisi dengan file-file yang tidak mau di push
+~~~
+# Django
+*.log
+*.pot
+*.pyc
+**pycache**
+db.sqlite3
+media
+# Backup files
+*.bak
+# If you are using PyCharm
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+# AWS User-specific
+.idea/**/aws.xml
+# Generated files
+.idea/**/contentModel.xml
+.DS_Store
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+# File-based project format
+*.iws
+# IntelliJ
+out/
+# JIRA plugin
+atlassian-ide-plugin.xml
+# Python
+*.py[cod]
+*$py.class
+# Distribution / packaging
+.Python build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+# Jupyter Notebook
+.ipynb_checkpoints
+# pyenv
+.python-version
+# celery
+celerybeat-schedule.*
+# SageMath parsed files
+*.sage.py
+# Environments
+.env*
+!.env.example*
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# mkdocs documentation
+/site
+# mypy
+.mypy_cache/
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+# sftp configuration file
+sftp-config.json
+# Package control specific files Package
+Control.last-run
+Control.ca-list
+Control.ca-bundle
+Control.system-ca-bundle
+GitHub.sublime-settings
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+~~~
 - buat aplikasi bernama main dengan command "python manage.py startapp main"
 - tambahkan atribut 'main' pada INSTALLED-APPS di settings.py yang ada di folder pacil_store
 - mengubah file models.py pada folder main dan diisi dengan 
-{
+~~~
     import uuid
     from django.db import models
 
@@ -198,10 +200,10 @@
     
         def __str__(self):
             return self.name
-}
+~~~
 - jalankan command berikut "python manage.py makemigrations | python manage.py migrate" untuk melakukan migrasi model
 - tambahkan kode berikut pada views.py di folder main
-{
+~~~
     from django.shortcuts import render
 
     def show_main(request):
@@ -212,9 +214,9 @@
         }
 
         return render(request, "main.html", context)
-}
+~~~
 - pada folder main buat folder templates dan buat file "main.html" lalu diisi dengan kode berikut
-{
+~~~
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -236,9 +238,9 @@
         <h5>Class: {{ class }}</h5>
     </body>
     </html>
-}
+~~~
 - buat file utls.py pada folder main lalu diisi denga kode 
-{
+~~~
     from django.urls import path
     from main.views import show_main
 
@@ -247,13 +249,13 @@
     urlpatterns = [
         path('', show_main, name='show_main'),
     ]
-}
+~~~
 - tambahkan kode berikut pada file urls.py di folder pacil_store
-{
+~~~
     from django.urls import path, include
 
     dan tambahkan kode ini pada urlpatterns "path('', include('main.urls')),"
-}
+~~~
 - buka laman "https://pbp.cs.ui.ac.id" dan lakukan login denga sso 
 - create new project dan namai pacilstore
 - save credential dan command yang diberikan
@@ -286,3 +288,372 @@ Karena Django merupakan salah satu framework yang paling populer dan kuat saat i
 
 *pertanyaan enam*
 ada beberapa typo pada dokumen tutorial yang sempat bikin bingun, sama kalo bisa tambahin link referensi supaya bisa lebih mengerti saat mengerjakan tutorial.
+
+**Tugas 3**
+
+*pertanyaan satu*
+Data delivery melibatkan pemindahan data dari satu tempat ke tempat lain. Data delivery memastikan bahwa informasi yang tepat sampai ke orang yang tepat pada waktu yang tepat. Proses ini mencakup beberapa komponen utama, seperti data sources dan data destinations. Hal ini penting untuk memastikan akurasi data, mendeteksi error, validasi data, meningkatkan pengambilan keputusan, akses data real-time, dan Data-driven insight.
+
+*pertanyaan dua*
+Menurut saya JSON lebih baik, karena JSON lebih compact dan mudah di muat di javascript. JSON juga dapat menjadi objek javascript dengan mudah, lebih pendek, tidak menggunakan tag penutup, lebih cepat dibaca dan ditulis, dan dapat menggunakan array.
+
+*pertanyaan tiga*
+Method is_valid() pada form Django berfungsi untuk validasi data yang diinput melalui formulir agar memastikan seluruh field mematuhi aturan validasi (misal required, tipe data, pola input). Kita membutuhkan is_valid() agar data yang akan diproses atau disimpan ke database telah lolos pemeriksaan validasi sesuai logika yang kita maksud/inginkan.
+
+*pertanyaan empat*
+CSRF token diperlukan untuk melindungi aplikasi dari serangan Cross-Site Request Forgery (CSRF) atau serangan yang di mana penyerang memalsukan permintaan. Jika token ini tidak ada penyerang bisa membuat program yang secara otomatis mengirimkan permintaan ke endpoint Django menggunakan identitas pengguna yang sedang login tanpa sepengetahuannya dengan begitu penyeran dapat mengubah password dan melakukan sesuatu atas nama target yang diserang, data orang yang diserang juga dapat mengalami kebocoran.
+
+*pertanyaan lima*
+- membuat folder templates pada root dan membuat base.html di dalamnya
+~~~
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block meta %} {% endblock meta %}
+</head>
+
+<body>
+    {% block content %} {% endblock content %}
+</body>
+</html>
+~~~
+- ubah settingan 'DIRS' pada settings.py pada folder pacil_store
+~~~
+'DIRS': [BASE_DIR / 'templates']
+~~~
+- buat file forms.py pada folder main dan diisi dengan 
+~~~
+from django.forms import ModelForm
+from main.models import Product
+
+class ProductForm(ModelForm):
+    class Meta:
+        model = Product
+        fields = ["name", "price", "description", "category", "thumbnail", "is_featured"]
+~~~
+- mengubah file models.py di folder main dengan
+~~~
+class Product(models.Model):
+    CATEGORY_CHOICES = [
+        ('pakaian', 'Pakaian'),
+        ('exclusive', 'Exclusive'),
+        ('elektronik', 'Elektronik'),
+        ('makanan', 'Makanan'),
+        ('minuman', 'Minuman'),
+        ('aksesoris', 'Aksesoris'),
+        ('trend', 'Trend'),
+
+    ]
+    
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=255)
+    price = models.IntegerField()
+    description = models.TextField()
+    thumbnail = models.URLField(blank=True, null=True)
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='update')
+    product_views = models.PositiveIntegerField(default=0)
+    is_featured = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.name
+    
+    def increment_views(self):
+        self.product_views += 1
+        self.save()
+~~~
+- lakukan migrasi dengan menjalankan command
+~~~ 
+python manage.py makemigrations | python manage.py migrate 
+~~~
+- ubah views.py pada folder main dengan 
+~~~
+from django.shortcuts import render, redirect, get_object_or_404
+from main.forms import ProductForm
+from main.models import Product
+from django.http import HttpResponse
+from django.core import serializers
+
+# Create your views here.
+def show_main(request):
+    product_list = Product.objects.all()
+    context = {
+        'app1' : 'Pacil',
+        'app2' : '/',
+        'app3' : 'Store',
+        'name': 'Cyrillo Praditya Soeharto',
+        'class': 'PBP B',
+        'product_list': product_list,
+    }
+
+    return render(request, "main.html", context)
+
+def create_product(request):
+    form = ProductForm(request.POST or None)
+
+    if form.is_valid() and request.method == "POST":
+        form.save()
+        return redirect('main:show_main')
+
+    context = {'form': form}
+    return render(request, "create_product.html", context)
+
+def show_product(request, id):
+    product = get_object_or_404(Product, pk=id)
+    product.increment_views()
+
+    context = {
+        'product': product
+    }
+
+    return render(request, "product_detail.html", context)
+~~~
+- update folder main.html
+~~~
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="app-detail">
+        <span class="app1">{{ app1 }}</span> 
+        <span class="app2">{{ app2 }}</span> 
+        <span class="app3">{{ app3 }}</span>
+    </h1>
+    <h5 class="app-detail identity">Name: {{ name }}</h5>
+    <h5 class="app-detail identity">Class: {{ class }}</h5>
+
+    <a href="{% url 'main:create_product' %}">
+    <button class="add">+ Add Product</button>
+    </a>
+
+    <hr>
+
+    <div class="product-list">
+    {% if not product_list %}
+    <p class="empty-list">Belum ada barang pada pacil store.</p>
+    {% else %}
+
+    {% for product in product_list %}
+    <div class="product-item">
+    {% if product.thumbnail %}
+    <img src="{{ product.thumbnail }}" alt="ini thumbnail" width="150" height="100">
+    {% else %}
+    <img src="https://picsum.photos/200" alt="Lorem Picsum" width="150" height="100">
+    <br />
+    {% endif %}
+
+    <h2><a href="{% url 'main:show_product' product.id %}">{{ product.name }}</a></h2>
+
+    <p><b>{{ product.get_category_display }}</b>{% if product.is_featured %} | 
+        <b>Featured</b>{% endif %} | <i>{{ product.created_at|date:"d M Y H:i" }}</i> 
+        | Views: {{ product.product_views }}</p>
+
+
+    <p>{{ product.description|truncatewords:25 }}...</p>
+
+    <p><a href="{% url 'main:show_product' product.id %}"><button>Read More</button></a></p>
+    </div>
+
+    
+    {% endfor %}
+
+    {% endif %}
+    </div>
+{% endblock content %}
+~~~
+- lalu buat file create_product.html pada folder yang sama denga main.html dan diisi dengan
+~~~
+{% extends 'base.html' %} 
+{% block content %}
+<h1>Add Product</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+    <tr>
+      <td></td>
+      <td>
+        <input type="submit" value="Add Product" />
+      </td>
+    </tr>
+  </table>
+</form>
+
+{% endblock %}
+~~~
+- selanjutnya buat file product_detail.html pada folder yang sama denga main.html dan diisi dengan
+~~~
+{% extends 'base.html' %}
+{% block content %}
+<p><a href="{% url 'main:show_main' %}"><button>← Back to Product List</button></a></p>
+
+<h1>{{ product.name }}</h1>
+<p><b>{{ product.get_category_display }}</b>{% if product.is_featured %} | 
+    <b>Featured</b>{% endif %} | <i>{{ product.created_at|date:"d M Y, H:i" }}</i> 
+    | Views: {{ product.product_views }}</p>
+
+{% if product.thumbnail %}
+<img src="{{ product.thumbnail }}" alt="Product thumbnail" width="300">
+<br /><br />
+{% endif %}
+
+<p>{{ product.description }}</p>
+
+{% endblock content %}
+~~~
+- tambahkan kode berikut pada file settings.py di folder pacil_store
+~~~
+CSRF_TRUSTED_ORIGINS = ["<url-deployment-pws-kamu>"]
+~~~
+- tambahkan method berikut pada views.py di folder main
+~~~
+def show_xml(request):
+     product_list = Product.objects.all()
+     xml_data = serializers.serialize("xml", product_list)
+     return HttpResponse(xml_data, content_type="application/xml")
+
+def show_xml_by_id(request, news_id):
+   try:
+       product_item = Product.objects.filter(pk=news_id)
+       xml_data = serializers.serialize("xml", product_item)
+       return HttpResponse(xml_data, content_type="application/xml")
+   except Product.DoesNotExist:
+       return HttpResponse(status=404)
+
+def show_json(request):
+    product_list = Product.objects.all()
+    json_data = serializers.serialize("json", product_list)
+    return HttpResponse(json_data, content_type="application/json")
+
+def show_json_by_id(request, news_id):
+   try:
+       product_item = Product.objects.get(pk=news_id)
+       json_data = serializers.serialize("json", [product_item])
+       return HttpResponse(json_data, content_type="application/json")
+   except Product.DoesNotExist:
+       return HttpResponse(status=404)
+~~~
+- ubah kode di dalam urls.py di folder main dengan 
+~~~
+from main.views import show_main, create_product, show_product, show_xml, show_json, show_xml_by_id, show_json_by_id
+
+urlpatterns = [
+    path('', show_main, name='show_main'),
+    path('create-product/', create_product, name='create_product'),
+    path('product/<str:id>', show_product, name='show_product'),
+    path('xml/', show_xml, name='show_xml'),
+    path('json/', show_json, name='show_json'),
+    path('xml/<str:news_id>/', show_xml_by_id, name='show_xml_by_id'),
+    path('json/<str:news_id>/', show_json_by_id, name='show_json_by_id'),
+]
+~~~
+- menambahkan kode berikut pada bagian header di file base.html
+~~~
+<style>
+
+        .app-detail {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 40px;
+            display: inline-block;
+            border: 5px solid black;
+            margin-left: 41%;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .app1 {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .app2 {
+            font-weight: bold;
+        }
+
+        .app3 {
+            color: red;
+            font-weight: bold;
+        }
+
+        .identity {
+            color: gray;
+            font-weight: normal;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            font-size: 10px;
+            border: none;
+            display: block;
+            padding-bottom: 0px;
+        }
+
+        .add {
+            border-radius: 8px;
+            background-color: purple;
+            color: white;
+            font-weight: bold;
+            border: 3px solid black;
+        }
+
+        .empty-list {
+            font-style: italic;
+            color: gray;
+            text-align: center;
+            margin-top: 14%;
+            font-size: 20px;
+        }
+
+        button {
+            border-radius: 8px;
+            background-color: lightgray;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            padding: 10px;
+            padding-left: 60px;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            padding: 0;
+            padding-top: 10%;
+            margin:0;
+        }
+
+        .product-item button:hover {
+            background-color: #ffff00;
+        }
+
+    </style>
+~~~
+- lakukan push ke github dengan github desktop dan ke pws dengan command 
+~~~
+git push pws master
+~~~
+- uji coba pada lokal
+~~~
+python manage.py runserver 
+~~~
+
+*pertanyaan enam*
+ada kode yang diulang di tutorial yang kadang bikin bingung
+
+*Screenshot postman*
