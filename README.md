@@ -265,6 +265,7 @@ GitHub.sublime-settings
 - jalankan command yang diberikan pws lalu push ke pws
 
 *pertanyaan dua*
+<img width="611" height="231" alt="image" src="https://github.com/user-attachments/assets/cba3a838-4a72-4b48-b6d4-a3d34f0cc291" />
 untuk flowchart ada pada nomor2.drawio.png
 
 penjelasan:
@@ -657,3 +658,11 @@ python manage.py runserver
 ada kode yang diulang di tutorial yang kadang bikin bingung
 
 *Screenshot postman*
+<img width="1915" height="953" alt="image" src="https://github.com/user-attachments/assets/d73b113c-1a7d-43e3-9a78-3b232e8313a0" />
+<img width="1916" height="953" alt="image" src="https://github.com/user-attachments/assets/230c1960-4f45-41fd-888f-cb2897749a40" />
+<img width="1603" height="953" alt="image" src="https://github.com/user-attachments/assets/6f82d21d-b915-41e7-9a4f-3aee854a20a2" />
+<img width="1916" height="954" alt="image" src="https://github.com/user-attachments/assets/acedcb94-95eb-4ea0-861e-eca13194b33e" />
+
+
+
+
