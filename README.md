@@ -2,6 +2,7 @@
 **Tugas 2**
 
 *pertanyaan satu*
+
 - membuat repository pada github desktop
 - publish repository tersebut ke github
 - membuat virtual environment pada repository tersebut dengan command "python -m venv env"
@@ -265,6 +266,9 @@ GitHub.sublime-settings
 - jalankan command yang diberikan pws lalu push ke pws
 
 *pertanyaan dua*
+
+<img width="611" height="231" alt="image" src="https://github.com/user-attachments/assets/cba3a838-4a72-4b48-b6d4-a3d34f0cc291" />
+
 untuk flowchart ada pada nomor2.drawio.png
 
 penjelasan:
@@ -276,34 +280,43 @@ penjelasan:
 - Response: Server mengirimkan response kembali ke client, yang berisi halaman HTML yang telah diproses.
 
 *pertanyaan tiga*
+
 settings.py berfungsi sebagai pengaturan untuk projek, seperti INSTALLED_APPS untuk mengetahui aplikasi mana yang aktif, DATABASES untuk mengatur database yang akan digunakan, TEMPLATES untuk memberi tahu file templates kita, SECRET_KEY, DEBUG, DAN ALLOWED_HOSTS agar projek aman.
 
 *pertanyaan empat*
+
 python manage.py makemigrations akan membuat Django memeriksa setiap perubahan pada model dan menghasilkan file migrasi di dalam direktori migrations/ aplikasi. Berkas migrasi ini diberi nomor secara otomatis (misalnya, 0001_initial.py, 0002_auto_...) dan mewakili perubahan inkremental yang dibuat pada skema basis data.
 
 python manage.py migrate akan membuat perintah migrasi memeriksa berkas migrasi yang dihasilkan oleh makemigrations dan menerapkan perubahan dalam urutan yang benar. Perintah ini menangani pembuatan tabel, modifikasi kolom, penambahan indeks, dan pelaksanaan operasi terkait basis data lainnya. Perintah ini memastikan bahwa dependensi antar migrasi dihormati, sehingga migrasi diterapkan dalam urutan yang benar.
 
 *pertanyaan lima*
+
 Karena Django merupakan salah satu framework yang paling populer dan kuat saat ini, Django juga memiliki keamanan yang bagus, juga memiliki banyak templates dan library yang bisa digunakan. Django juga menggunakan bahasa pemrograman python yang dimana bahasa tersebut sudah pernah dipelajari oleh mahasiswa Fasilkom UI pada semester 1.
 
 *pertanyaan enam*
+
 ada beberapa typo pada dokumen tutorial yang sempat bikin bingun, sama kalo bisa tambahin link referensi supaya bisa lebih mengerti saat mengerjakan tutorial.
 
 **Tugas 3**
 
 *pertanyaan satu*
+
 Data delivery melibatkan pemindahan data dari satu tempat ke tempat lain. Data delivery memastikan bahwa informasi yang tepat sampai ke orang yang tepat pada waktu yang tepat. Proses ini mencakup beberapa komponen utama, seperti data sources dan data destinations. Hal ini penting untuk memastikan akurasi data, mendeteksi error, validasi data, meningkatkan pengambilan keputusan, akses data real-time, dan Data-driven insight.
 
 *pertanyaan dua*
+
 Menurut saya JSON lebih baik, karena JSON lebih compact dan mudah di muat di javascript. JSON juga dapat menjadi objek javascript dengan mudah, lebih pendek, tidak menggunakan tag penutup, lebih cepat dibaca dan ditulis, dan dapat menggunakan array.
 
 *pertanyaan tiga*
+
 Method is_valid() pada form Django berfungsi untuk validasi data yang diinput melalui formulir agar memastikan seluruh field mematuhi aturan validasi (misal required, tipe data, pola input). Kita membutuhkan is_valid() agar data yang akan diproses atau disimpan ke database telah lolos pemeriksaan validasi sesuai logika yang kita maksud/inginkan.
 
 *pertanyaan empat*
+
 CSRF token diperlukan untuk melindungi aplikasi dari serangan Cross-Site Request Forgery (CSRF) atau serangan yang di mana penyerang memalsukan permintaan. Jika token ini tidak ada penyerang bisa membuat program yang secara otomatis mengirimkan permintaan ke endpoint Django menggunakan identitas pengguna yang sedang login tanpa sepengetahuannya dengan begitu penyeran dapat mengubah password dan melakukan sesuatu atas nama target yang diserang, data orang yang diserang juga dapat mengalami kebocoran.
 
 *pertanyaan lima*
+
 - membuat folder templates pada root dan membuat base.html di dalamnya
 ~~~
 {% load static %}
@@ -654,6 +667,349 @@ python manage.py runserver
 ~~~
 
 *pertanyaan enam*
+
 ada kode yang diulang di tutorial yang kadang bikin bingung
 
 *Screenshot postman*
+
+<img width="1915" height="953" alt="image" src="https://github.com/user-attachments/assets/d73b113c-1a7d-43e3-9a78-3b232e8313a0" />
+<img width="1916" height="953" alt="image" src="https://github.com/user-attachments/assets/230c1960-4f45-41fd-888f-cb2897749a40" />
+<img width="1603" height="953" alt="image" src="https://github.com/user-attachments/assets/6f82d21d-b915-41e7-9a4f-3aee854a20a2" />
+<img width="1916" height="954" alt="image" src="https://github.com/user-attachments/assets/acedcb94-95eb-4ea0-861e-eca13194b33e" />
+
+
+**Tugas 4**
+
+*pertanyaan satu*
+
+AuthenticationForm adalah sebuah class yang disediakan oleh Django buat autentikasi pengguna. Form ini dapat menerima input berupa username dan password dari user dan memverifikasi identitas user.
+Kelebihan:
+- Sudah siap pakai dan terintegrasi dengan django
+- Dapat dimodifikasi
+- Built-in password hashing dan validasi
+
+Kekurangan:
+- Autentifikasi yang sudah template, tidak bisa selalu sesuai kebutuhan
+
+*pertanyaan dua*
+
+Autentikasi adalah proses untuk memastikan bahwa pengguna adalah pemilik sah credential yang dipakai. Django menggunakan AuthenticationForm.
+Otorisasi adalah proses untuk menentukan apa saja yang dapat dilakukan oleh pengguna yang telah terautentikasi. Django menggunkana @login_required.
+
+*pertanyaan tiga*
+
+Session:
+    Kelebihan:
+    - Data disimpan di server.
+    - Session ID disimpan di client.
+
+    Kekurangan:
+    - Sesi cepat selesai, terutama saat keluar aplikasi atau menutup browser
+
+Cookies:
+    Kelebihan:
+    - Data disimpan di browser
+    - Bertahan lama sesuai tanggal kadaluarsa (biasanya 90 hari) jadi bisa masuk tanpa login
+
+    Kekurangan:
+    - Mudah diserang
+    - Size terbatas
+
+*pertanyaan empat*
+
+Ada resiko serangan, seperti XSS (Cross-Site Scripting) dan CSRF (Cross-Site Request Forgery).
+Django menangani masalah tersebut dengan salah satunya CSRF token.
+
+*pertanyaan lima*
+- tambahkan kode berikut di models.py
+~~~
+from django.contrib.auth.models import User
+user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+~~~
+- jalankan command berikut "python manage.py makemigrations | python manage.py migrate" untuk melakukan migrasi model
+- Menambahkan beberapa import di views.py pada folder main
+~~~
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+import datetime
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+~~~
+- Tambahkan method register, login, dan logout pada file tersebut juga
+~~~
+def register(request):
+    form = UserCreationForm()
+
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your account has been successfully created!')
+            return redirect('main:login')
+    context = {'form':form}
+    return render(request, 'register.html', context)
+
+def login_user(request):
+   if request.method == 'POST':
+      form = AuthenticationForm(data=request.POST)
+
+      if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            response = HttpResponseRedirect(reverse("main:show_main"))
+            response.set_cookie('last_login', str(datetime.datetime.now()))
+            return response
+
+   else:
+      form = AuthenticationForm(request)
+   context = {'form': form}
+   return render(request, 'login.html', context)
+
+def logout_user(request):
+    logout(request)
+    response = HttpResponseRedirect(reverse('main:login'))
+    response.delete_cookie('last_login')
+    return response
+~~~
+- tambahkan kode berikut di atas show_main dan show_news
+~~~
+@login_required(login_url='/login')
+~~~
+- tambahkan kode berikut di dalam context di method show_main
+~~~
+'last_login': request.COOKIES.get('last_login', 'Never')
+~~~
+- ubah kode di urls.py menjadi seperti ini
+~~~
+from django.urls import path
+from main.views import show_main, create_product, show_product, show_xml, show_json, show_xml_by_id, show_json_by_id, register, login_user, logout_user 
+
+app_name = 'main'
+
+urlpatterns = [
+    path('', show_main, name='show_main'),
+    path('create-product/', create_product, name='create_product'),
+    path('product/<str:id>', show_product, name='show_product'),
+    path('xml/', show_xml, name='show_xml'),
+    path('json/', show_json, name='show_json'),
+    path('xml/<str:news_id>/', show_xml_by_id, name='show_xml_by_id'),
+    path('json/<str:news_id>/', show_json_by_id, name='show_json_by_id'),
+    path('register/', register, name='register'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
+
+]
+~~~
+- buat file register.html di folder templates dalam main dan isi dengan kode berikut
+~~~
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Register</title>
+{% endblock meta %}
+
+{% block content %}
+
+<div>
+  <h1>Register</h1>
+
+  <form method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+      <tr>
+        <td></td>
+        <td><input type="submit" name="submit" value="Daftar" /></td>
+      </tr>
+    </table>
+  </form>
+
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
+{% endblock content %}
+~~~
+- buat file login.html di folder templates dalam main dan isi dengan kode berikut
+~~~
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+<div class="login">
+  <h1>Login</h1>
+
+  <form method="POST" action="">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+      <tr>
+        <td></td>
+        <td><input class="btn login_btn" type="submit" value="Login" /></td>
+      </tr>
+    </table>
+  </form>
+
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %} Don't have an account yet?
+  <a href="{% url 'main:register' %}">Register Now</a>
+</div>
+
+{% endblock content %}
+~~~
+- tambahkan kode berikut pada main.html setelah tombol add product
+~~~
+    <a href="{% url 'main:logout' %}">
+    <button class="logout">Logout</button>
+    </a>
+
+    <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+    <hr>
+
+    <a href="?filter=all">
+    <button type="button">All Articles</button>
+    </a>
+    <a href="?filter=my">
+        <button type="button">My Articles</button>
+    </a> 
+~~~
+- tambahkan kode berikut pada product_detail.html di bawah product.description
+~~~
+{% if product.user %}
+    <p>Author: {{ product.user.username }}</p>
+{% else %}
+    <p>Author: Anonymous</p>
+{% endif %}
+~~~
+- terakhir tambahkan kode berikut di bagian head pada base.html
+~~~
+<a href="{% url 'main:logout' %}"></a>
+~~~
+- dan ubah kode pada bagian style dengan kode berikut
+~~~
+        .app-detail {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 40px;
+            display: inline-block;
+            border: 5px solid black;
+            margin-left: 41%;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .app1 {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .app2 {
+            font-weight: bold;
+        }
+
+        .app3 {
+            color: red;
+            font-weight: bold;
+        }
+
+        .identity {
+            color: gray;
+            font-weight: normal;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            font-size: 10px;
+            border: none;
+            display: block;
+            padding-bottom: 0px;
+        }
+
+        .add {
+            border-radius: 8px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            border: 3px solid black;
+        }
+
+        .add:hover {
+            background-color: blue;
+        }
+
+        .empty-list {
+            font-style: italic;
+            color: gray;
+            text-align: center;
+            margin-top: 11%;
+            font-size: 20px;
+            margin-left: 41%;
+        }
+
+        button {
+            border-radius: 8px;
+            background-color: lightgray;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .logout {
+            border-radius: 8px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            border: 3px solid black;
+            float: right;
+        }
+        
+        .logout:hover {
+            background-color: red;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            padding: 10px;
+            padding-left: 60px;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            padding: 0;
+            padding-top: 10%;
+            margin:0;
+        }
+
+        .product-item button:hover {
+            color: white;
+            background-color: #bf00ff;
+        }
+~~~
