@@ -1013,3 +1013,10 @@ urlpatterns = [
             background-color: #bf00ff;
         }
 ~~~
+
+*screenshot akun1*
+<img width="1911" height="866" alt="Screenshot 2025-09-23 210333" src="https://github.com/user-attachments/assets/fdbf1266-1904-4420-9a39-b1bec493635a" />
+
+*screenshot akun2*
+<img width="1910" height="868" alt="Screenshot 2025-09-23 210426" src="https://github.com/user-attachments/assets/c0137e3e-461e-4382-9964-4f95ee81c272" />
+
