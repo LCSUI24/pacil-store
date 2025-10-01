@@ -1020,6 +1020,7 @@ urlpatterns = [
 *screenshot akun2*
 <img width="1910" height="868" alt="Screenshot 2025-09-23 210426" src="https://github.com/user-attachments/assets/c0137e3e-461e-4382-9964-4f95ee81c272" />
 
+<<<<<<< HEAD
 **Tugas 5**
 
 *pertanyaan satu*
@@ -1049,3 +1050,5 @@ grid mode display css untuk mengatur dalam sebuah container dalam dua dimensi ya
 - checklist 1: menambahkan fungsi edit_product dan delete_product pada views.py. Lalu tambahkan endpoint pada urls.py. Lalu tambahkan file edit.html pada folder templates di main
 
 - checklist 2,3,4,5,6,7,8: menambahkan tailwind ke file base.html dan membuat card.html untuk mengkustomisasi per-produk. Buat static folder yang diisi folder css dan folder image. Lalu tambahkan png pada image folder dan rename menjadi no-product.png. Buat golbal.css pada file css untuk kustomisasi form. Ubah juga file html yang sudah dikerjakan pada tugas sebelumnya dengan menammbahkan styling pada tag html yang ingin di kustomisasi. Buat file navbar.html pada folder templates di root dan tambahkan stying juga.
+=======
+>>>>>>> 91202e518cd28c1d6e231920cdc9a03762229907
