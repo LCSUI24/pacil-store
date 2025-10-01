@@ -1013,3 +1013,39 @@ urlpatterns = [
             background-color: #bf00ff;
         }
 ~~~
+
+*screenshot akun1*
+<img width="1911" height="866" alt="Screenshot 2025-09-23 210333" src="https://github.com/user-attachments/assets/fdbf1266-1904-4420-9a39-b1bec493635a" />
+
+*screenshot akun2*
+<img width="1910" height="868" alt="Screenshot 2025-09-23 210426" src="https://github.com/user-attachments/assets/c0137e3e-461e-4382-9964-4f95ee81c272" />
+
+**Tugas 5**
+
+*pertanyaan satu*
+
+urutan dengan prioritas tertinggi:
+- inline, style langsung diterapkan pada tag html
+- ID selector, lebih memprioritaskan yang menunjuk id daripada tipe tag
+- class, karena class tidak unique seperti id maka class ada dibawah prioritas id
+- tag, mengubah style pada tag yang dituju
+
+*pertanyaan dua*
+
+karena responsive design memungkinkan aplikasi kita dapat terlihat nyaman di ukuran apapun dan menyesuaikan layout dan kebutuhan
+contoh website yang tidak responsive adalah https://arngren.net/ karena tidak menyesuaikan layout untuk ukuran-ukuran tertentu sehingga sulit untuk dilihat dan contoh yang responsive adalah siakNG karena dapat menyesuaikan ukuran layout, seperti mobile, table, desktop, dll.
+
+*pertanyaan tiga*
+
+margin adalah jarak dari antara satu elemen ke elemen lainnya (border ke border). Sedangkan padding adalah jarak dari elemen ke border. Terakhir border adalah pembatas yang berada disekitar elemen (seperti frame atau bingkai foto).
+
+*pertanyaan empat*
+
+flexbox mode display css untuk mengatur dalam sebuah container yang lebih flexibel sesuai namanya fexbile box
+grid mode display css untuk mengatur dalam sebuah container dalam dua dimensi yang lebih flexibel dari flexbox
+
+*pertanyaan lima*
+
+- checklist 1: menambahkan fungsi edit_product dan delete_product pada views.py. Lalu tambahkan endpoint pada urls.py. Lalu tambahkan file edit.html pada folder templates di main
+
+- checklist 2,3,4,5,6,7,8: menambahkan tailwind ke file base.html dan membuat card.html untuk mengkustomisasi per-produk. Buat static folder yang diisi folder css dan folder image. Lalu tambahkan png pada image folder dan rename menjadi no-product.png. Buat golbal.css pada file css untuk kustomisasi form. Ubah juga file html yang sudah dikerjakan pada tugas sebelumnya dengan menammbahkan styling pada tag html yang ingin di kustomisasi. Buat file navbar.html pada folder templates di root dan tambahkan stying juga.

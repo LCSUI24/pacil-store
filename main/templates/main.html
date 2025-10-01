@@ -1,61 +1,57 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>pacil store</title>
+{% endblock meta %}
+
 {% block content %}
-    <h1 class="app-detail">
-        <span class="app1">{{ app1 }}</span> 
-        <span class="app2">{{ app2 }}</span> 
-        <span class="app3">{{ app3 }}</span>
-    </h1>
-    <h5 class="app-detail identity">Name: {{ name }}</h5>
-    <h5 class="app-detail identity">Class: {{ class }}</h5>
+{% include 'navbar.html' %}
+<div class="bg-[#1B3C53] w-full pt-16 min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-    <a href="{% url 'main:create_product' %}">
-    <button class="add">+ Add Product</button>
-    </a>
+    <!-- Header Section -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-white mb-2">Our latest product</h1>
+      <p class="text-gray-400">Stay updated with the latest Pacil stories and analysis</p>
+    </div>
 
-    <a href="{% url 'main:logout' %}">
-    <button class="logout">Logout</button>
-    </a>
+    <!-- Filter Section -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 bg-[#234C6A] rounded-lg border border-gray-200 p-4">
+      <div class="flex space-x-3 mb-4 sm:mb-0">
+        <a href="?" class="{% if request.GET.filter == 'all' or not request.GET.filter  %} bg-[#D2C1B6] text-[#1B3C53]{% else %}bg-white text-gray-700 border border-gray-300{% endif %} px-4 py-2 rounded-md font-medium transition-colors hover:bg-[#D2C1B6] hover:text-white">
+          All product
+        </a>
+        <a href="?filter=my" class="{% if request.GET.filter == 'my' %} bg-[#D2C1B6] text-[#1B3C53]{% else %}bg-white text-gray-700 border border-gray-300{% endif %} px-4 py-2 rounded-md font-medium transition-colors hover:bg-[#D2C1B6] hover:text-white">
+          My product
+        </a>
+      </div>
+      {% if user.is_authenticated %}
+        <div class="text-sm text-white">
+          Last login: {{ last_login }}
+        </div>
+      {% endif %}
+    </div>
 
-    <h5>Sesi terakhir login: {{ last_login }}</h5>
-
-    <hr>
-
-    <a href="?filter=all">
-    <button type="button">All Articles</button>
-    </a>
-    <a href="?filter=my">
-        <button type="button">My Articles</button>
-    </a> 
-
-    <div class="product-list">
+    <!-- product Grid -->
     {% if not product_list %}
-    <p class="empty-list">Belum ada barang pada pacil store.</p>
+      <div class="bg-white rounded-lg border border-gray-200 p-12 text-center">
+        <div class="w-32 h-32 mx-auto mb-4">
+          <img src="{% static 'image/no-product.png' %}" alt="No product available" class="w-full h-full object-contain">
+        </div>
+        <h3 class="text-lg font-medium text-gray-900 mb-2">No product found</h3>
+        <p class="text-gray-500 mb-6">Be the first to share football product with the community.</p>
+        <a href="{% url 'main:create_product' %}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+          Create product
+        </a>
+      </div>
     {% else %}
-
-    {% for product in product_list %}
-    <div class="product-item">
-    {% if product.thumbnail %}
-    <img src="{{ product.thumbnail }}" alt="ini thumbnail" width="150" height="100">
-    {% else %}
-    <img src="https://picsum.photos/200" alt="Lorem Picsum" width="150" height="100">
-    <br />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for product in product_list %}
+          {% include 'card_product.html' with product=product %}
+        {% endfor %}
+      </div>
     {% endif %}
-
-    <h2><a href="{% url 'main:show_product' product.id %}">{{ product.name }}</a></h2>
-
-    <p><b>{{ product.get_category_display }}</b>{% if product.is_featured %} | 
-        <b>Featured</b>{% endif %} | <i>{{ product.created_at|date:"d M Y H:i" }}</i> 
-        | Views: {{ product.product_views }}</p>
-
-
-    <p>{{ product.description|truncatewords:25 }}...</p>
-
-    <p><a href="{% url 'main:show_product' product.id %}"><button>Read More</button></a></p>
-    </div>
-
-    
-    {% endfor %}
-
-    {% endif %}
-    </div>
+  </div>
+</div>
 {% endblock content %}
