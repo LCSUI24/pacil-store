@@ -1,4 +1,4 @@
-# pacil-store
+# pacil store
 **Tugas 2**
 
 *pertanyaan satu*
