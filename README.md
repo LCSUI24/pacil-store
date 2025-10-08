@@ -1049,3 +1049,27 @@ grid mode display css untuk mengatur dalam sebuah container dalam dua dimensi ya
 - checklist 1: menambahkan fungsi edit_product dan delete_product pada views.py. Lalu tambahkan endpoint pada urls.py. Lalu tambahkan file edit.html pada folder templates di main
 
 - checklist 2,3,4,5,6,7,8: menambahkan tailwind ke file base.html dan membuat card.html untuk mengkustomisasi per-produk. Buat static folder yang diisi folder css dan folder image. Lalu tambahkan png pada image folder dan rename menjadi no-product.png. Buat golbal.css pada file css untuk kustomisasi form. Ubah juga file html yang sudah dikerjakan pada tugas sebelumnya dengan menammbahkan styling pada tag html yang ingin di kustomisasi. Buat file navbar.html pada folder templates di root dan tambahkan stying juga. (referensi color palette https://colorhunt.co/palette/1b3c53234c6a456882d2c1b6)
+
+
+**Tugas 6**
+
+*pertanyaan satu*
+
+Synchronous harus menunggu respons dari server sebelum lanjut 
+Asynchronous bisa lanjut melakukan hal lain sambil menunggu respons
+
+*pertanyaan dua*
+
+AJAX menggunakan XMLHttpRequest atau API Fetch untuk mengirim permintaan ke URL view yang ditentukan. Pertama klien mengirim data ke endpoint Django; views Django memproses permintaan, melakukan operasi, dan mengembalikan respons dalam bentuk JSON atau XML, lalu, klien menerima respons secara asinkron dan memperbarui elemen DOM tanpa memuat ulang halaman penuh.
+
+*pertanyaan tiga*
+
+AJAX memiliki refresh halaman secara parsial, yang mengurangi refresh dibandingkan render biasa. Selain itu, AJAX meningkatkan interaktivitas, memungkinkan validasi real-time, dan mengoptimalkan kinerja untuk aplikasi dinamis, sementara render biasa lebih sederhana namun kurang efisien untuk konten yang sering berubah.
+
+*pertanyaan empat*
+
+Untuk keamanan, ada token CSRF pada setiap permintaan AJAX dengan menyertakannya dalam header. Gunakan autentikasi built-in Django seperti AuthenticationForm untuk validasi kredensial, terapkan HTTPS untuk enkripsi data, lindungi terhadap serangan XSS, dan validasi input sisi server untuk mencegah injeksi SQL atau manipulasi data.
+
+*pertanyaan lima*
+
+AJAX meningkatkan pengalaman pengguna dengan membuat interface yang lebih responsif dan seamless, mengurangi waktu tunggu dengan asynchronus function, serta memungkinkan interaksi real-time tanpa gangguan refresh. Hal tersebut membuat lebih intuitif dan efisien, meskipun memerlukan penanganan kesalahan yang baik untuk menghindari kebingungan pengguna.
